@@ -24,6 +24,11 @@ def pagina_no_encontrada(error):
     return render_template('404.html'),404
 
 
+@app.route("/Elhermano")
+def hermano():
+    return render_template('elhermano.html')
+
+
 if __name__=='__main__':
     app.register_error_handler(404, pagina_no_encontrada)
     app.run(debug=True, port=5000)
